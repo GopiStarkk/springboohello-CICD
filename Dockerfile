@@ -1,3 +1,3 @@
 FROM tomcat:8
-copy target/gs-spring-boot*.jar target/newapp
+COPY target/newapp.war /usr/local/tomcat/webapps/
 
