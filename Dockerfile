@@ -1,3 +1,3 @@
 FROM tomcat:8
-COPY target/newapp.war /usr/local/tomcat/webapps/
+COPY target/newapp.jar /usr/local/tomcat/webapps/
 
