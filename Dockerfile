@@ -1,4 +1,3 @@
-FROM openjdk:8
-ADD ./target/newapp.jar app.jar
-RUN bash -c 'touch /app.jar'
-ENTRYPOINT ["java","-jar","app.jar"]
+FROM tomcat:8
+copy target/gs-spring-boot*.jar target/newapp
+
