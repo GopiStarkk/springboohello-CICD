@@ -1,3 +1,4 @@
-FROM tomcat:8
-COPY target/newapp.jar /usr/local/tomcat/webapps/
-
+FROM openjdk:8
+ADD ./target/newapp.jar app.jar
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["java","-jar","app.jar"]
